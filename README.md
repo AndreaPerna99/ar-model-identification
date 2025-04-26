@@ -20,17 +20,16 @@ Developed entirely in **MATLAB** with structured scripts and custom function lib
 
 ```
 📦 model-identification-logistic-regression/
-├── 📁 Functions/                         # Custom reusable MATLAB functions
-├── 📁 Images/                            # Output plots and diagrams
-│   ├── 📸 Models_Comparison.png          # Task 1: Model validation plot
-│   ├── 📸 Unknown_Model.png              # Task 1: Unknown system residuals
-│   ├── 📸 MultiClass_Train.png            # Task 2: Training data visualization
-│   ├── 📸 MultiClass_Test.png             # Task 2: Test data classification
-├── 📁 More/                              # (Ignore)
-├── 📄 Perna_Andrea.mlx                   # Complete MATLAB Live Script
-├── 📄 Project_Request.mlx                # Project request & initial setup
-├── 📘 Assignment_25_07.pdf                # Official Report (detailed explanations)
-├── 📄 README.md                           # You are here!
+├ 📁 Functions/                         # Custom reusable MATLAB functions
+├ 📁 Images/                            # Output plots and diagrams
+│  ├ 📸 Models_Comparison.png           # Task 1: Model validation plot
+│  ├ 📸 Unknown_Model.png               # Task 1: Unknown system residuals
+│  ├ 📸 MultiClass_Train.png            # Task 2: Training data visualization
+│  ├ 📸 MultiClass_Test.png             # Task 2: Test data classification
+├ 📄 Perna_Andrea.mlx                   # Complete MATLAB Live Script
+├ 📄 Project_Request.mlx                # Project request & initial setup
+├ 📘 Assignment_25_07.pdf               # Official Report (detailed explanations)
+├ 📄 README.md                          # You are here!
 ```
 
 ---
