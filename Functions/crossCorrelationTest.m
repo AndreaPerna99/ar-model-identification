@@ -1,0 +1,62 @@
+%This function performs the cross-correlation test between the sequence of
+% residuals and the input sequence, that is a binary statistical 
+%hypothesis test that could be used in model assessment.
+
+function [ OUT ] = crossCorrelationTest(y,u,ThetaHat,type)
+    
+    p=length(ThetaHat); %number of parameters
+
+    %computation of the sequence of residuals
+    switch(type) %it evaluates all the possible cases
+
+        case 'ARX'
+            %in an ARX model the number of parameters p = 2*n
+            n = p/2;
+            Hu = myHank(u,n); 
+            Hy = myHank(y,n); 
+            H = [-Hy,Hu];
+            res= y(n+1:end)-H*ThetaHat; %residuals
+
+        case 'FIR'
+            n = p;
+            Hu = myHank(u,n);
+            H = [Hu];
+            res = y(n+1:end)-H*ThetaHat; %residuals
+
+        case 'AR'
+            n = p;
+            Hy = myHank(y,n);
+            H = [-Hy];
+            res = y(n+1:end)-H*ThetaHat; %residuals
+
+        otherwise
+            %new possibilities could be implemented
+    end
+
+    N=length(y)-n; %number of data points
+    m = N/4; %number of tests
+
+    xCorrEpsU = xcorr(res,u); %cross-correlation between input and res
+    xCorrEpsU = xCorrEpsU(n+1:end); %to avoid errors
+
+    autoCorrEps = autocorr(eps); %autocorrelation vector of residuals
+    autoCorrU = autocorr(u); %autocorrelation vector of the input
+
+    %take m gaussian tests
+    for i=1:m
+        gamma = xCorrEpsU(i) / (sqrt(autoCorrEps(0)*autoCorrU(0)));
+        if not(gaussianTest(N,gamma))
+            m_bar = m_bar + 1;
+        end
+    end
+
+    %finally, the anderson test is performed to take the final decision
+    if (andersonTest(m,m_bar,alpha))
+        disp("Model accepted.");
+        OUT = true;
+    else 
+        disp("Model rejected.");
+        OUT = false;
+    end
+
+end
