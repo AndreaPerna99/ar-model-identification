@@ -4,6 +4,11 @@
 Model estimation, validation, and classification in dynamical systems using MATLAB.
 
 ---
+## 📌 Project Info
+- 🎓 Course: Learning and Estimation of Dynamical Systems
+- 🏫 University of Bologna
+- 📅 Year: 2023
+---
 
 ## 🧠 About the Project
 
@@ -197,17 +202,11 @@ The objective is to build a classifier able to distinguish between **four classe
 
 ---
 
-## 📅 Year
-
-2024
-
----
-
 ## 👨‍🎓 Author
 
 - Andrea Perna
 
-📧 andrea.perna3@studio.unibo.it
+📧 and.perna99@gmail.com
 
 ---
 
