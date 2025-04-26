@@ -220,8 +220,8 @@ The objective is to build a classifier able to distinguish between **four classe
 ## 📎 Resources
 
 - [📘 Full Assignment Report (Assignment_25_07.pdf)](./Assignment_25_07.pdf)
-- 📄 Project Implementation (Perna_Andrea.mlx)
-- 📄 Project Request Specifications (Project_Request.mlx)
+- [📄 Project Implementation](Perna_Andrea.mlx)
+- [📄 Project Request Specifications](Project_Request.mlx)
 
 ---
 
