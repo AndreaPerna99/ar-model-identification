@@ -1,4 +1,4 @@
-# 📚 Model Identification and Multi-Class Logistic Regression
+# Model Identification and Multi-Class Logistic Regression
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-Scientific%20Computing-orange?logo=mathworks)](https://www.mathworks.com/products/matlab.html)  
 Model estimation, validation, and classification in dynamical systems using MATLAB.
@@ -20,7 +20,12 @@ Developed entirely in **MATLAB** with structured scripts and custom function lib
 
 ```
 📦 model-identification-logistic-regression/
-├── 📁 Functions/                         # Useful MATLAB functions
+├── 📁 Functions/                         # Custom reusable MATLAB functions
+├── 📁 Images/                            # Output plots and diagrams
+│   ├── 📸 Models_Comparison.png          # Task 1: Model validation plot
+│   ├── 📸 Unknown_Model.png              # Task 1: Unknown system residuals
+│   ├── 📸 MultiClass_Train.png            # Task 2: Training data visualization
+│   ├── 📸 MultiClass_Test.png             # Task 2: Test data classification
 ├── 📁 More/                              # (Ignore)
 ├── 📄 Perna_Andrea.mlx                   # Complete MATLAB Live Script
 ├── 📄 Project_Request.mlx                # Project request & initial setup
@@ -45,6 +50,18 @@ The model could belong either to the **ARX** (AutoRegressive with eXogenous inpu
 - Least Squares Estimation (LSE)
 - Model order selection
 - Model validation (residuals analysis)
+
+---
+
+## 📷 Model Identification Overview
+
+<p align="center">
+  <img src="./Images/Models_Comparison.png" height="250"/>
+  <img src="./Images/Unknown_Model.png" height="250"/>
+</p>
+
+- **Models_Comparison**: Overlay of system output vs model output for different identified structures.
+- **Unknown_Model**: Behavior of the real unknown model used as benchmark.
 
 ---
 
@@ -85,11 +102,10 @@ Result:
 ### 5. Model Validation
 - **Whiteness Test**:
   - Residuals must behave like zero-mean white noise.
-  - Both direct and cross-validation approaches passed.
 - **Cross-Correlation Test**:
   - Residuals uncorrelated with input.
-- **Final residuals comparison**:
-  - FIR structure showed minimal residuals ➔ **Correct model identified**.
+- **Final Model Selection**:
+  - FIR structure proved to match the unknown system better.
 
 ---
 
@@ -116,6 +132,18 @@ The objective is to build a classifier able to distinguish between **four classe
 - Problem modeling as One-vs-All
 - Logistic Regression parameter estimation
 - Classification and error evaluation
+
+---
+
+## 📷 Logistic Regression Overview
+
+<p align="center">
+  <img src="./Images/MultiClass_Train.png" height="250"/>
+  <img src="./Images/MultiClass_Test.png" height="250"/>
+</p>
+
+- **MultiClass_Train**: Training dataset distribution across the four classes (C1–C4).
+- **MultiClass_Test**: Classification result and decision boundaries over the test set.
 
 ---
 
@@ -203,4 +231,3 @@ The objective is to build a classifier able to distinguish between **four classe
 All rights reserved. Educational use only.
 
 ---
-
